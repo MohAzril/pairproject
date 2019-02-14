@@ -43,3 +43,6 @@ def form(request):
         form = PostForm1()
     mall = Mall.objects.all()
     return render(request,'home/input_mall.html', {'form': form,'malls':mall})
+
+def download(request):
+    return render(request, 'home/link_download.html', {})

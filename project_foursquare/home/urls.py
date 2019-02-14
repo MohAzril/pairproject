@@ -8,4 +8,6 @@ urlpatterns = [
     path('mall', views.mall, name='mall'),
     path('', views.form, name='malls'),
     path('park', views.input_post, name='parks'),
+    path('download', views.download, name='download'),
+
 ]
