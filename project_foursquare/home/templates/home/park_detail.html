@@ -1,0 +1,19 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block content %}
+    <br><br> 
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-12">
+            <img src="{{ data.gambar.url }}" style="width:100%;">
+        </div>
+    </div>
+    <br>
+    <h4 class="card-title">{{ data.nama }}</a></h4>
+    <h5>{{ data.lokasi }}</h5>
+    <p class="card-text">{{ data.deskripsi }}</p>
+    <br><br>
+    <br><br>    
+    <br><br>
+    <br><br> 
+</div>
+{% endblock %}

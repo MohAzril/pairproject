@@ -5,6 +5,9 @@ from .models import Park,Mall
 # Create your views here.
 
 def home(request):
-    isi=Mall.objects.all()
-    return render(request, 'home/content.html',{'isi':isi})
+    isi=Park.objects.all()
+    return render(request, 'home/park.html',{'isi':isi})
 
+def blog_detail(request, blog_id):
+    blogging = Park.objects.get(pk=blog_id)
+    return render(request, 'home/park_detail.html', {'data':blogging})

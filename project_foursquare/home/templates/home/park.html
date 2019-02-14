@@ -19,7 +19,7 @@
                                 </h4>
                                 <h5>{{ data.lokasi }}</h5>
                                 <p class="card-text">{{ data.deskripsi|truncatewords:25 }}</p>
-                                <a href="#">Baca Selengkapnya</a>
+                                <a href="{% url 'blog_detail' blog_id=data.id %}">Baca Selengkapnya</a>
                             </div>
                         </div>
                     </div>
