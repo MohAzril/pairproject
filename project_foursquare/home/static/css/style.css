@@ -1,3 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
+.marginmid{
+    margin: 0 auto;
+}
 
+.textmid{
+    text-align: center;
+}
