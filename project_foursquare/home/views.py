@@ -3,7 +3,6 @@ from django.utils import timezone
 from .models import Park,Mall
 
 # Create your views here.
-
 def home(request):
     isi=Park.objects.all()
     return render(request, 'home/park.html',{'isi':isi})
