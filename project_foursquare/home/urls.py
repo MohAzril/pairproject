@@ -1,6 +1,10 @@
-from django.urls import path
+
+from django.contrib import admin
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.mall, name='mall')
+    path('park', views.home, name='home'),
+    path('park/<int:blog_id>', views.blog_detail, name='blog_detail'),
+    path('', views.mall, name='mall'),
 ]
