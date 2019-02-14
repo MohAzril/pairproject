@@ -7,4 +7,5 @@ urlpatterns = [
     path('mall/<int:mall_id>', views.mall_detail, name='mall_detail'),
     path('mall', views.mall, name='mall'),
     path('', views.form, name='malls'),
-    path('park', views.input_post, name="parks"),
+    path('park', views.input_post, name='parks'),
+]
