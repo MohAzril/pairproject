@@ -1,0 +1,57 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<br><br>
+<div class="container">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          {% for data in isi %}
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <a href="#"></a><img class="card-img-top" src="{{ data.gambar.url }}" alt="" style="height: 200px"></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="{% url 'park_detail' park_id=data.id %}" target="_blank">{{ data.nama }}</a>
+                </h4>
+                <h5>{{ data.lokasi }}</h5>
+                <p class="card-text">{{ data.deskripsi|truncatewords:25 }}</p>
+                <a href="{% url 'park_detail' park_id=data.id %}" target="_blank">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <button type="button" class="btn btn-primary fixed-bottom" style="margin-left: 20px; margin-bottom: 20px;" data-toggle="modal" data-target="#exampleModal">Add Park</button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Form Add Park</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+                {{ form.as_p }}
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

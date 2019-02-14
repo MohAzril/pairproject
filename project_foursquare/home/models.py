@@ -9,6 +9,11 @@ class Park(models.Model):
     lokasi = models.CharField(max_length=255)
     gambar = models.ImageField(upload_to = 'images')
     deskripsi = models.TextField(max_length=500)
+    map_park = models.TextField(max_length=1000)
+    fasilitas_1 = models.CharField(max_length=255)
+    fasilitas_2 = models.CharField(max_length=255)
+    fasilitas_3 = models.CharField(max_length=255)
+    fasilitas_4 = models.CharField(max_length=255)
 
     def __str__(self):
         return self.nama

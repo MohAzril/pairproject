@@ -1,19 +1,86 @@
 {% extends 'home/base.html' %}
 {% load static %}
 {% block content %}
-    <br><br> 
-    <div class="row justify-content-center">
-        <div class="col-md-6 col-12">
-            <img src="{{ data.gambar.url }}" style="width:100%;">
+<div class="container">
+
+        <div class="row">
+    
+          <!-- Post Content Column -->
+          <div class="col-lg-8">
+    
+            <!-- Title -->
+            <h1 class="mt-4">{{ data.nama }}</h1>    
+            <hr>
+    
+            <!-- Preview Image -->
+            <img class="img-fluid rounded" src="{{ data.gambar.url }}" alt="" style="width:100%;">
+    
+            <hr>
+    
+            <!-- Post Content -->
+            <p>{{ data.deskripsi }}</p>
+            <hr>
+    
+          </div>
+    
+          <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+    
+            <!-- Search Widget -->
+            <div class="card my-4">
+              <h5 class="card-header bg-primary" style="color:white;">Search</h5>
+              <div class="card-body">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">Go!</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Categories Widget -->
+            <div class="card my-4">
+              <h5 class="card-header bg-primary" style="color:white;">Fasilitas</h5>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a>{{ data.fasilitas_1 }}</a>
+                      </li>
+                      <li>
+                        <a>{{ data.fasilitas_2 }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a>{{ data.fasilitas_3 }}</a>
+                      </li>
+                      <li>
+                        <a>{{ data.fasilitas_4 }}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- Side Widget -->
+            <div class="card my-4">
+              <h5 class="card-header bg-primary" style="color:white;">Lokasi</h5>
+              <iframe src="{{ data.map_park }}"></iframe>
+            </div>
+            
+    
         </div>
+    
     </div>
-    <br>
-    <h4 class="card-title">{{ data.nama }}</a></h4>
-    <h5>{{ data.lokasi }}</h5>
-    <p class="card-text">{{ data.deskripsi }}</p>
-    <br><br>
-    <br><br>    
-    <br><br>
-    <br><br> 
+        <!-- /.row -->
+    
+</div>
+      <!-- /.container -->
 </div>
 {% endblock %}
