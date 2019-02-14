@@ -1,4 +1,4 @@
-#!/home/alphatech/kumpulan/Pair_project_django/env_sembarang/bin/python
+#!/home/alphatech/Documents/Challanges/pairproject/env_sembarang/bin/python
 
 import sys
 import getopt

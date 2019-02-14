@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/alphatech/kumpulan/Pair_project_django/env_sembarang"
+VIRTUAL_ENV="/home/alphatech/Documents/Challanges/pairproject/env_sembarang"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
