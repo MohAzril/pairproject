@@ -18,7 +18,7 @@ def input_post(request):
         if form.is_valid():
             post = form.save(commit=False)
             form.save()
-            return redirect('input_post')
+            return redirect('parks')
     else:
         form = PostForm2()
     isi=Park.objects.all()
@@ -38,7 +38,7 @@ def form(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
-            return redirect('form')
+            return redirect('malls')
     else:
         form = PostForm1()
     mall = Mall.objects.all()
